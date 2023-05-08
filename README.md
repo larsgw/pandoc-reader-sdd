@@ -31,8 +31,8 @@ Currently it only supports checklists and dichotomous keys (see [Unsupported fea
 - Taxon names are displayed in short in keys (no authorship, abbreviated generic epithet for
   species); in full in headings (with authorship); and if different the vernacular name is
   listed below the heading. This uses `<Representation>`/`<Label>` for the vernacular/fallback name,
-  `<CanonicalName>` and `<CanonicalAuthorship>` for the scientific name, and `<Rank>` for
-  determining when to italicize.
+  `<CanonicalName>` (`<Simple>`) and `<CanonicalAuthorship>` for the scientific name, and `<Rank>`
+  for determining when to italicize.
 
 ### Standard-permitted extensions
 
@@ -59,3 +59,5 @@ Invalid extensions, according to the XSD.
 - Identifcation keys with `<Question>` are not yet supported.
 - Publications (`<Publications>`) are not yet supported.
 - The `role` of `<Label>` elements in `<MediaObject>` elements is not yet taken into account.
+- The more detailed information that can be entered in `<CanonicalName>`, such as `<Genus>` and
+  `<SpecificEpithet>`, is not yet handled.
