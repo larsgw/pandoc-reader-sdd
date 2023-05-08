@@ -21,16 +21,24 @@ local function get_child_of_name (node, name)
   return get_children_of_name(node, name)[1]
 end
 
-local function get_text (node)
+local function get_raw_text (node)
   local text = {}
   for _, child in ipairs(node._children) do
     if child._type == 'TEXT' then
       table.insert(text, child._text)
     elseif child._children ~= nil then
-      table.insert(text, get_text(child))
+      table.insert(text, get_raw_text(child))
     end
   end
   return table.concat(text, ' ')
+end
+
+local function get_text (node)
+  local text = get_raw_text(node)
+  text = string.gsub(text, ' +', ' ')
+  text = string.gsub(text, '^ ', '')
+  text = string.gsub(text, ' $', '')
+  return text
 end
 
 local function get_label (node)
