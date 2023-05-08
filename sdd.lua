@@ -145,7 +145,7 @@ local function format_taxon_name (taxon_name, form)
   if form == nil or form == 'simple' then
     return { taxon_name.display_name }
   elseif form == 'vernacular' then
-    if taxon_name.display_name == taxon_name.name then
+    if taxon_name.name == nil or taxon_name.display_name == taxon_name.name then
       return {}
     end
     if taxon_name.authorship ~= nil and taxon_name.display_name == taxon_name.name .. ' ' .. taxon_name.authorship then
