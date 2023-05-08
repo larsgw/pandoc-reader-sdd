@@ -125,7 +125,8 @@ local function read_taxon_name (node)
 end
 
 local function style_taxon_name (name, rank)
-  if rank == 'genus' or rank == 'subgenus' or rank == 'species' or rank == 'subspecies' then
+  if rank == 'genus' or rank == 'subgenus' or rank == 'species' or rank == 'subspecies'
+     or rank == 'variety' or rank == 'form' then
     return pandoc.Emph(name)
   else
     return name
