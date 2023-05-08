@@ -362,7 +362,7 @@ local function format_identification_key (key, dataset)
 
         if choice.taxon_ref == nil and choice.next == nil and choice.subkey_ref ~= nil then
           table.insert(item_part, pandoc.RawInline('tex', '\\iffalse'))
-          table.insert(item_part, pandoc.Link('go', choice.subkey_ref))
+          table.insert(item_part, pandoc.Link('go', '#' .. choice.subkey_ref))
           table.insert(item_part, pandoc.RawInline('tex', '\\fi'))
 
           -- TeX alternative (show page number)
