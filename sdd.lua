@@ -78,7 +78,7 @@ local function format_media_object (media_object)
       { id = media_object.id }
     )
   else
-    return pandoc.Link(media_object.caption, media_object.source, { id = media_object.id })
+    return pandoc.Link(media_object.caption, media_object.source, media_object.source, { id = media_object.id })
   end
 end
 
