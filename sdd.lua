@@ -2,10 +2,6 @@ local xml2lua = require('xml2lua')
 local handler = require('xmlhandler.dom')
 local parser = xml2lua.parser(handler)
 
--- BEGIN TEST
-local json = require('json')
--- END TEST
-
 -- BEGIN XML traversal and SDD processing utilities
 local function get_children_of_name (node, name)
   local children = {}
