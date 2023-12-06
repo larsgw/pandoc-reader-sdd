@@ -6,6 +6,11 @@ Requires Pandoc v2.16.2 or later.
 
 Currently it only supports checklists and dichotomous keys (see [Unsupported features](#unsupported-features)).
 
+For more information, see:
+
+> Willighagen, L. G. [![ORCID logo](https://orcid.org/assets/icons/favicon.ico)](https://orcid.org/0000-0002-4751-4637) (2023).
+> Ingesting Structured Descriptive Data into Pandoc. _Syntaxus baccata._ https://doi.org/10.59350/yg9hm-f1x47
+
 ## Usage
 
     pandoc -f path/to/sdd.lua [...]
